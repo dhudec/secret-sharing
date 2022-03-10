@@ -8,11 +8,11 @@ import VisibilityIcon from "@mui/icons-material/VisibilityOutlined";
 import {Paper} from "@mui/material";
 import {CopyButton} from "@/components/shared";
 import Image from 'next/image';
-import {useStyles} from "@/components/pages/styles/ViewSecretPage.styles";
 
 export const ViewSecretPage = () => {
-    const {t, secret, viewSecret} = useViewSecretPage();
-    const classes = useStyles();
+    const {t, isValidating, secret, viewSecret} = useViewSecretPage();
+
+    if (isValidating) return null;
 
     return (
         <Box
