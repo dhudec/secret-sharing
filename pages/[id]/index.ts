@@ -11,7 +11,6 @@ export const getStaticPaths: GetStaticPaths = () => ({
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
-        'secrets',
         'components'
     ])),
   },

@@ -11,10 +11,12 @@ import {FooterInfo} from "@/components/pages/FooterInfo";
 import Container from "@mui/material/Container";
 
 export const ViewSecretPage = () => {
-    const {t, isValidating, secret, viewSecret} = useViewSecretPage();
+    console.log('Rendering page');
+    const {isValidating, secret, viewSecret} = useViewSecretPage();
 
     if (isValidating) return null;
 
+    console.log('Is Validating is null');
     return (
         <Box
             display="flex"
@@ -27,10 +29,10 @@ export const ViewSecretPage = () => {
                     <PoweredByBasisTheory/>
                 </Box>
                 <Box mb={1}>
-                    <Typography variant="h5" sx={{fontWeight: 600}}>{t('somebodySentSecret')}</Typography>
+                    <Typography variant="h5" sx={{fontWeight: 600}}>{"Send your secret, securely."}</Typography>
                 </Box>
                 <Box mb={4}>
-                    <Typography color="textSecondary" variant="body1">{t('clickToView')}</Typography>
+                    <Typography color="textSecondary" variant="body1">{"Click \"Open Secret\" to view. Make sure you view it before it disappears."}</Typography>
                 </Box>
                 <Box alignItems="center" display="flex" flexDirection="column" mt={4}>
                     {secret ?
@@ -62,7 +64,7 @@ export const ViewSecretPage = () => {
                                                 fontSize: '16px',
                                                 fontWeight: 600
                                             }}>
-                                                {t('viewSecret')}
+                                                {"View Secret"}
                                             </Typography>
                                         </Box>
                                     </Box>
