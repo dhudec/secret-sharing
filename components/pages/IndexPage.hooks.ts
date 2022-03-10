@@ -9,6 +9,7 @@ export const useIndexPage = () => {
 
   const createSecret = async () => {
     try {
+      const ttl = 600; // todo - Gonzo do this for realz
       const secret = await clientApiFramework.secrets.create({
         ttl: Number(ttl),
         data,
