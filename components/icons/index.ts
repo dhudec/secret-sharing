@@ -60,3 +60,4 @@ export { Info } from './InfoIcon';
 export { Calendar } from './CalendarIcon';
 export { ClientSide } from './ClientSideIcon';
 export { Member } from './MemberIcon';
+export { SharedSecretLock } from './SharedSecretLockIcon';

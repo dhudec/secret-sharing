@@ -17,14 +17,9 @@ export const useViewSecretPage = () => {
     }
   };
 
-  const copySecret = () => {
-    console.log("copying the secret");
-  }
-
   return {
     t,
     secret,
     viewSecret,
-    copySecret,
   };
 };

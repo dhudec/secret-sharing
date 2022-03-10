@@ -4,12 +4,15 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import {PoweredByBasisTheory} from "@/components/shared/PoweredByBasisTheory";
 import Button from "@mui/material/Button";
-import CopyIcon from "@mui/icons-material/ContentCopyOutlined";
 import VisibilityIcon from "@mui/icons-material/VisibilityOutlined";
 import {Paper} from "@mui/material";
+import {CopyButton} from "@/components/shared";
+import Image from 'next/image';
+import {useStyles} from "@/components/pages/styles/ViewSecretPage.styles";
 
 export const ViewSecretPage = () => {
-    const {t, secret, viewSecret, copySecret} = useViewSecretPage();
+    const {t, secret, viewSecret} = useViewSecretPage();
+    const classes = useStyles();
 
     return (
         <Box
@@ -38,19 +41,12 @@ export const ViewSecretPage = () => {
                                     {secret}
                                 </Typography>
                             </Box>
-                            <Button onClick={copySecret} variant="text">
-                                <Box alignItems="center" display="flex">
-                                    <CopyIcon fontSize="small"/>
-                                    <Box ml={1}>
-                                        <Typography sx={{
-                                            fontSize: '13px',
-                                            fontWeight: 600
-                                        }}>
-                                            {t('copy')}
-                                        </Typography>
-                                    </Box>
-                                </Box>
-                            </Button>
+                            <CopyButton
+                                content={secret}
+                                iconPosition="start"
+                                showCopyText
+                                size="small"
+                            />
                         </Box>
                     </Paper> :
                     <Paper sx={{width: '500px'}} variant="outlined">
@@ -73,9 +69,12 @@ export const ViewSecretPage = () => {
             </Box>
             <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
                 <Paper sx={{width: '500px'}} variant="outlined">
-                    <Box sx={{textAlign: 'left'}} py={2}>
-                        <Typography sx={{fontWeight: 600}} variant="h6">How did we make it secure?</Typography>
-                        <Typography color="textSecondary" variant="subtitle2">Learn more about securing data with Basis Theory.</Typography>
+                    <Box display="flex" flexDirection="row">
+                        <Image src="/public/secret-share-icon.png" layout="fill" />
+                        <Box sx={{textAlign: 'left'}} py={2} ml={2.5}>
+                            <Typography sx={{fontWeight: 600}} variant="h6">How did we make it secure?</Typography>
+                            <Typography color="textSecondary" variant="subtitle2">Learn more about securing data with Basis Theory.</Typography>
+                        </Box>
                     </Box>
                 </Paper>
             </Box>
