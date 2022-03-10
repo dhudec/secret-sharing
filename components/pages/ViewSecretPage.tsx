@@ -7,7 +7,8 @@ import Button from "@mui/material/Button";
 import VisibilityIcon from "@mui/icons-material/VisibilityOutlined";
 import {Paper} from "@mui/material";
 import {CopyButton} from "@/components/shared";
-import Image from 'next/image';
+import {FooterInfo} from "@/components/pages/FooterInfo";
+import Container from "@mui/material/Container";
 
 export const ViewSecretPage = () => {
     const {t, isValidating, secret, viewSecret} = useViewSecretPage();
@@ -19,64 +20,59 @@ export const ViewSecretPage = () => {
             display="flex"
             flexDirection="column"
             justifyContent="center"
+            height="100vh"
             textAlign="center">
-            <Box mt={4} mb={19.5}>
-                <PoweredByBasisTheory/>
-            </Box>
-            <Box mb={1}>
-                <Typography variant="h5" sx={{fontWeight: 600}}>{t('somebodySentSecret')}</Typography>
-            </Box>
-            <Box mb={4}>
-                <Typography color="textSecondary" variant="body1">{t('clickToView')}</Typography>
-            </Box>
-            <Box alignItems="center" display="flex" flexDirection="column" mt={4}>
-                {secret ?
-                    <Paper sx={{width: '500px'}} variant="outlined">
-                        <Box pb={1.5} pt={5}>
-                            <Box mb={3}>
-                                <Typography sx={{
-                                    fontFamily: 'Source Code Pro',
-                                    fontSize: '23px',
-                                }}>
-                                    {secret}
-                                </Typography>
-                            </Box>
-                            <CopyButton
-                                content={secret}
-                                iconPosition="start"
-                                showCopyText
-                                size="small"
-                            />
-                        </Box>
-                    </Paper> :
-                    <Paper sx={{width: '500px'}} variant="outlined">
-                        <Box py={5}>
-                            <Button onClick={viewSecret} variant="contained">
-                                <Box alignItems="center" display="flex">
-                                    <VisibilityIcon/>
-                                    <Box ml={1}>
-                                        <Typography sx={{
-                                            fontSize: '16px',
-                                            fontWeight: 600
-                                        }}>
-                                            {t('viewSecret')}
-                                        </Typography>
-                                    </Box>
+            <Container maxWidth="sm">
+                <Box mt={4} mb={19.5}>
+                    <PoweredByBasisTheory/>
+                </Box>
+                <Box mb={1}>
+                    <Typography variant="h5" sx={{fontWeight: 600}}>{t('somebodySentSecret')}</Typography>
+                </Box>
+                <Box mb={4}>
+                    <Typography color="textSecondary" variant="body1">{t('clickToView')}</Typography>
+                </Box>
+                <Box alignItems="center" display="flex" flexDirection="column" mt={4}>
+                    {secret ?
+                        <Paper sx={{width: '500px'}} variant="outlined">
+                            <Box pb={1.5} pt={5}>
+                                <Box mb={3}>
+                                    <Typography sx={{
+                                        fontFamily: 'Source Code Pro',
+                                        fontSize: '23px',
+                                    }}>
+                                        {secret}
+                                    </Typography>
                                 </Box>
-                            </Button>
-                        </Box>
-                    </Paper>}
-            </Box>
-            <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
-                <Paper sx={{width: '500px'}} variant="outlined">
-                    <Box display="flex" flexDirection="row">
-                        {/*<Image src="/public/secret-share-icon.png" layout="fill" />*/}
-                        <Box sx={{textAlign: 'left'}} py={2} ml={2.5}>
-                            <Typography sx={{fontWeight: 600}} variant="h6">How did we make it secure?</Typography>
-                            <Typography color="textSecondary" variant="subtitle2">Learn more about securing data with Basis Theory.</Typography>
-                        </Box>
-                    </Box>
-                </Paper>
-            </Box>
+                                <CopyButton
+                                    content={secret}
+                                    iconPosition="start"
+                                    showCopyText
+                                    size="small"
+                                />
+                            </Box>
+                        </Paper> :
+                        <Paper sx={{width: '500px'}} variant="outlined">
+                            <Box py={5}>
+                                <Button onClick={viewSecret} variant="contained">
+                                    <Box alignItems="center" display="flex">
+                                        <VisibilityIcon/>
+                                        <Box ml={1}>
+                                            <Typography sx={{
+                                                fontSize: '16px',
+                                                fontWeight: 600
+                                            }}>
+                                                {t('viewSecret')}
+                                            </Typography>
+                                        </Box>
+                                    </Box>
+                                </Button>
+                            </Box>
+                        </Paper>}
+                </Box>
+                <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
+                    <FooterInfo />
+                </Box>
+            </Container>
         </Box>);
 }

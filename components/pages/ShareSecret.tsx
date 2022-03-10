@@ -7,6 +7,8 @@ import {BasisTheoryLogoWithText, CopyButton} from '@/components/shared';
 import {Paper, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import RefreshIcon from "@/components/icons/RefreshIcon";
+import {FooterInfo} from "@/components/pages/FooterInfo";
+import {PoweredByBasisTheory} from "@/components/shared/PoweredByBasisTheory";
 
 interface Props {
   secretId: string;
@@ -31,10 +33,7 @@ export const ShareSecret = ({secretId}: Props) => {
           textAlign="center"
         >
           <Box mb={19.5}>
-            <Typography color="textSecondary">{t('poweredBy')}</Typography>
-            <Box display="flex" justifyContent="center">
-              <BasisTheoryLogoWithText />
-            </Box>
+            <PoweredByBasisTheory />
           </Box>
           <Typography
             mb={1}
@@ -92,6 +91,9 @@ export const ShareSecret = ({secretId}: Props) => {
           </Box>
         </Box>
       </Container>
+      <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
+        <FooterInfo />
+      </Box>
     </Box>
   );
 };

@@ -34,7 +34,7 @@ export const CreateSecret = ({ ttl, setTtl, setData, createSecret }: Props) => {
           justifyContent="center"
           textAlign="center"
         >
-          <Box  mb={19.5}>
+          <Box mb={19.5}>
             <PoweredByBasisTheory />
           </Box>
           <Typography
