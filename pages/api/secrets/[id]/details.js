@@ -8,12 +8,17 @@ export default async function handler(req, res) {
     const {id} = req.query;
     console.log("retrieving token", id);
 
-    const token = await bt.tokens.retrieve(id);
-    const datePlusTTL = add(parseISO(token.createdAt), {seconds: token.metadata.ttl});
+    try {
+        const token = await bt.tokens.retrieve(id);
+        const datePlusTTL = add(parseISO(token.createdAt), {seconds: token.metadata.ttl});
 
-    if (getTime(datePlusTTL) > Date.now()) {
-        res.status(200).json({id: token.id, timeLeft: datePlusTTL});
-    } else {
-        res.status(404).json({})
+        if (getTime(datePlusTTL) > Date.now()) {
+            res.status(200).json({id: token.id, timeLeft: datePlusTTL});
+        } else {
+            res.status(404).json({})
+        }
+    } catch {
+        res.status(404).json({});
     }
+
 }

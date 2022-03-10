@@ -70,7 +70,7 @@ export const ViewSecretPage = () => {
             <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
                 <Paper sx={{width: '500px'}} variant="outlined">
                     <Box display="flex" flexDirection="row">
-                        <Image src="/public/secret-share-icon.png" layout="fill" />
+                        {/*<Image src="/public/secret-share-icon.png" layout="fill" />*/}
                         <Box sx={{textAlign: 'left'}} py={2} ml={2.5}>
                             <Typography sx={{fontWeight: 600}} variant="h6">How did we make it secure?</Typography>
                             <Typography color="textSecondary" variant="subtitle2">Learn more about securing data with Basis Theory.</Typography>
