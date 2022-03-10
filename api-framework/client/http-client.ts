@@ -13,7 +13,7 @@ interface HttpAdapterOptions {
 }
 
 const httpAdapter =
-  (method: 'post' | 'put' | 'delete') =>
+  (method: 'get' | 'post' | 'put' | 'delete') =>
   <Data, Payload = never>(path: string, options?: HttpAdapterOptions) =>
   async (payload?: Payload): FetchPromise<Data> => {
     let data: Data, status: number;
@@ -74,6 +74,7 @@ const httpAdapter =
  * usage of `useApi` and `usePaginatedApi` hooks
  */
 const httpClient = {
+  get: httpAdapter('get'),
   post: httpAdapter('post'),
   put: httpAdapter('put'),
   delete: httpAdapter('delete'),

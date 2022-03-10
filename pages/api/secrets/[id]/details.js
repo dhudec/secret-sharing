@@ -6,6 +6,7 @@ export default async function handler(req, res) {
     const bt = await new BasisTheory().init(env().BT_API_KEY);
 
     const {id} = req.query;
+    console.log("retrieving token", id);
 
     const token = await bt.tokens.retrieve(id);
     const datePlusTTL = add(parseISO(token.createdAt), {seconds: token.metadata.ttl});

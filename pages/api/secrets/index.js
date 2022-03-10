@@ -5,8 +5,6 @@ import {env} from "../../../server-side/env";
 export default async function handler(req, res) {
   const bt = await new BasisTheory().init(env().BT_API_KEY);
 
-  const {id} = req.query;
-
   const token = await bt.tokens.create({
     type: 'token',
     data: req.body.data,

@@ -9,7 +9,9 @@ import VisibilityIcon from "@mui/icons-material/VisibilityOutlined";
 import {Paper} from "@mui/material";
 
 export const ViewSecretPage = () => {
-    const {t, secret, viewSecret, copySecret} = useViewSecretPage();
+    const {t, isValidating, secret, viewSecret, copySecret} = useViewSecretPage();
+
+    if (isValidating) return null;
 
     return (
         <Box
@@ -75,7 +77,8 @@ export const ViewSecretPage = () => {
                 <Paper sx={{width: '500px'}} variant="outlined">
                     <Box sx={{textAlign: 'left'}} py={2}>
                         <Typography sx={{fontWeight: 600}} variant="h6">How did we make it secure?</Typography>
-                        <Typography color="textSecondary" variant="subtitle2">Learn more about securing data with Basis Theory.</Typography>
+                        <Typography color="textSecondary" variant="subtitle2">Learn more about securing data with Basis
+                            Theory.</Typography>
                     </Box>
                 </Paper>
             </Box>
