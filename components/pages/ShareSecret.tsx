@@ -77,6 +77,8 @@ export const ShareSecret = ({secretId}: Props) => {
           </Paper>
           <Box display="flex" justifyContent="center">
             <Button
+                component="a"
+                href="/"
                 startIcon={<RefreshIcon />}
                 sx={{
                   fontWeight: 600,
