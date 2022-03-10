@@ -59,7 +59,12 @@ export const CopyButton = (props: NoCopyTextProps | CopyTextProps) => {
         endIcon={endIcon}
         onClick={(event) => event.stopPropagation()}
         size={props.size}
-        startIcon={startIcon}
+        variant="contained"
+        sx={{
+          width: (theme) => theme.spacing(12),
+          fontSize: '16px',
+          fontWeight: 600
+        }}
       >
         {t(`shared.CopyButton.${copied ? 'copied' : 'copy'}`)}
       </Button>

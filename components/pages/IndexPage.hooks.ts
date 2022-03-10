@@ -4,17 +4,18 @@ import { useClientApiFramework } from '@/components/hooks';
 export const useIndexPage = () => {
   const [ttl, setTtl] = useState<string>('600');
   const [data, setData] = useState<string>();
+  const [secretId, setSecretId] = useState<string>();
   const [isSharePage, setIsSharePage] = useState<boolean>(false);
   const clientApiFramework = useClientApiFramework();
 
   const createSecret = async () => {
     try {
-      const ttl = 600; // todo - Gonzo do this for realz
-      const secret = await clientApiFramework.secrets.create({
+      const { data: secret } = await clientApiFramework.secrets.create({
         ttl: Number(ttl),
         data,
       });
 
+      setSecretId(secret.id);
       setIsSharePage(true);
     } finally {
     }
@@ -26,5 +27,6 @@ export const useIndexPage = () => {
     setTtl,
     setData,
     isSharePage,
+    secretId,
   };
 };

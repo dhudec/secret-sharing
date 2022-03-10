@@ -3,14 +3,18 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'next-i18next';
-import { BasisTheoryLogoWithText } from '@/components/shared';
+import {BasisTheoryLogoWithText, CopyButton} from '@/components/shared';
 import {Paper, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
 import RefreshIcon from "@/components/icons/RefreshIcon";
 
-export const ShareSecret = () => {
+interface Props {
+  secretId: string;
+}
+
+export const ShareSecret = ({secretId}: Props) => {
   const { t } = useTranslation('secrets');
+  const secretUrl = `${window.location.host}/${secretId}`;
 
   return (
     <Box
@@ -47,21 +51,20 @@ export const ShareSecret = () => {
           <Box display="flex" flexDirection="row" mb={3} justifyContent="space-around">
             <TextField
                 sx={{
-                  // marginRight: (theme) => theme.spacing(2),
                   width: (theme) => theme.spacing(50)
                 }}
                 inputProps={{
                   readOnly: true,
                   disabled: true,
                 }}
+                value={secretUrl}
             />
-            <Button sx={{
-              width: (theme) => theme.spacing(12),
-              fontSize: '16px',
-              fontWeight: 600
-            }} color="primary" onClick={() => ({})} variant="contained">
-              {t('copy')}
-            </Button>
+            <CopyButton
+                content={secretUrl}
+                iconPosition="start"
+                showCopyText
+                size="small"
+            />
           </Box>
           <Paper color="#070A1B" sx={{
             height: (theme) => theme.spacing(10),
@@ -72,17 +75,19 @@ export const ShareSecret = () => {
               {t('thisLinkWillBeDestroyed')}
             </Typography>
           </Paper>
-          <Button
-              startIcon={<RefreshIcon />}
-              sx={{
-                fontWeight: 600,
-                fontSize: '16px',
-                marginTop: (theme) => theme.spacing(4)
-              }}
-              size="medium"
-          >
-            {t('secureAnotherSecret')}
-          </Button>
+          <Box display="flex" justifyContent="center">
+            <Button
+                startIcon={<RefreshIcon />}
+                sx={{
+                  fontWeight: 600,
+                  fontSize: '16px',
+                  marginTop: (theme) => theme.spacing(4),
+                  width: 'fit-content'
+                }}
+            >
+              {t('secureAnotherSecret')}
+            </Button>
+          </Box>
         </Box>
       </Container>
     </Box>
