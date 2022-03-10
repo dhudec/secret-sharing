@@ -1,5 +1,5 @@
 import React from 'react';
-import { ToggleButton } from '@mui/lab';
+import ToggleButton from '@mui/material/ToggleButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -13,9 +13,10 @@ interface Props {
   ttl: string;
   setTtl: (newTtl: string) => void;
   setData: (newData: string) => void;
+  createSecret: () => void;
 }
 
-export const CreateSecret = ({ ttl, setTtl, setData }: Props) => {
+export const CreateSecret = ({ ttl, setTtl, setData, createSecret }: Props) => {
   const { t } = useCreateSecret();
 
   return (
@@ -98,7 +99,7 @@ export const CreateSecret = ({ ttl, setTtl, setData }: Props) => {
               </ToggleButton>
             </ToggleButtonGroup>
           </Box>
-          <Button color="primary" onClick={() => ({})} variant="contained">
+          <Button color="primary" onClick={createSecret} variant="contained">
             {t('createLink')}
           </Button>
         </Box>

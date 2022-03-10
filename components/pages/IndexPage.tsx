@@ -6,7 +6,7 @@ import { ShareSecret } from '@/components/pages/ShareSecret';
 const IndexPageC = () => {
   const { isSharePage, ...hookResponse } = useIndexPage();
 
-  return isSharePage ? <ShareSecret /> : <CreateSecret {...hookResponse} />;
+  return !isSharePage ? <ShareSecret /> : <CreateSecret {...hookResponse} />;
 };
 
 export const IndexPage = IndexPageC;
