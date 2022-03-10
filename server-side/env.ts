@@ -7,9 +7,13 @@ import { str } from 'envalid';
 const env = cached(
   cleanEnv,
   {
+    API_BASE_URL: str({
+        desc: "The base api url"
+    }),
     BT_API_KEY: str({
       desc: 'The BT server to server API key',
     }),
+
   }
 );
 
