@@ -8,7 +8,8 @@ const env = cached(
   cleanEnv,
   {
     API_BASE_URL: str({
-        desc: "The base api url"
+        desc: "The base api url",
+        default: undefined
     }),
     BT_API_KEY: str({
       desc: 'The BT server to server API key',
