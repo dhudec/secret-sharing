@@ -1,0 +1,27 @@
+{
+  "title": "<1>Tokenization</1><2>Sandbox</2>",
+  "alternativeTitle": "<1>Colin's \uD83D\uDC22</1><2>Sandbox</2>",
+  "subtitle": "Play around creating tokens in real-time",
+  "step1": {
+    "title": "Choose an application API Key",
+    "subtitle": "Use a test application or setup your own. Don't have an API key? <1>Create an application first</1>"
+  },
+  "step2": {
+    "title": "Explore the examples",
+    "subtitle": "Explore the examples and see it happening in real-time"
+  },
+  "apiKey": "API Key",
+  "setApiKey": "Set API Key",
+  "apiKeyError": "That doesn't seem to be a valid API Key. Copy a valid Basis Theory API Key to use the examples.",
+  "dataWarning": "This sandbox is intended for testing purposes only. Do not insert any production or sensitive information.",
+  "sandboxOption": {
+    "apiKey": {
+      "title": "Use your own API Key",
+      "subtitle": "Use an existing/new Application in Basis Theory and paste the API Key below."
+    },
+    "mock": {
+      "title": "Use sample data",
+      "subtitle": "Get a feel for tokenizing with Basis Theory using mocked API requests. All data will be stored in the client and lost on page load."
+    }
+  }
+}

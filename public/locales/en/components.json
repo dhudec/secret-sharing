@@ -1,0 +1,553 @@
+{
+  "shared": {
+    "LogoutButton": {
+      "signOut": "Sign Out",
+      "confirmHeading": "Are you sure you want to sign out of Basis Theory?",
+      "confirmCaption": "You can sign in again anytime.",
+      "confirmLabel": "Sign out",
+      "cancelLabel": "Not right now"
+    },
+    "CopyButton": {
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "Pagination": {
+      "caption": "Showing {{itemsCount}} of {{totalItems}} {{itemName}}"
+    },
+    "YourPlanTitle": {
+      "title": "YOUR PLAN",
+      "developer": "Developer"
+    },
+    "YourPlanProgressBar": {
+      "includedActiveTokens": "Included Active Tokens"
+    },
+    "YourPlanActiveTokens": {
+      "includedTokens": "Included Active Tokens",
+      "activeTokenOverage": "Active Token Overage"
+    },
+    "YourPlanCaption": {
+      "limited": "When a token has been Created, Read, Decrypted or used with one of our services (eg. Proxy or Reactor) it will become a Monthly Active Token for the current monthly billing cycle. Subsequent interactions with an active token do not count against the included active token limit.",
+      "limitExceeded": "You have exceeded the included Monthly Active Tokens for this plan by {{limitExceededBy}} tokens. Add billing information to avoid an interruption in service.",
+      "unlimited": "Once you've used all of your included Monthly Active Tokens, you'll be charged for each additional active token in the monthly billing cycle. To understand your pricing, view your plan."
+    }
+  },
+  "layout": {
+    "Alerts": {
+      "label": "Alerts"
+    },
+    "Drawer": {
+      "toggleOpen": "Expand menu",
+      "toggleClose": "Minimize menu"
+    },
+    "UserMenu": {
+      "profilePictureAlt": "Profile picture",
+      "helpAndSupport": "Help & Support"
+    },
+    "TenantMenu": {
+      "tenantsHeader": "Tenants",
+      "createNewTenant": "Create new Tenant",
+      "viewSettings": "View settings"
+    }
+  },
+  "application": {
+    "CreateApplication": {
+      "title": "Create Application",
+      "applicationName": "Application Name",
+      "applicationType": "Application Type",
+      "applicationTypeCaption": "To learn more about application types, <1>click here</1>.",
+      "selectPermissions": "Select Permissions",
+      "selectPermissionsCaption": "To learn more about permissions, <1>click here</1>.",
+      "create": "Create Application"
+    },
+    "ApplicationPermissionsEmptyState": {
+      "caption": "Choose an application type",
+      "helper": "Applications can serve multiple purposes.<1/> To learn more about each type of application, check out <2>our documentation</2>."
+    },
+    "ApplicationKeyModal": {
+      "title": "API Key Generated",
+      "apiKey": "API Key",
+      "alertTitle": "Remember!",
+      "alertDescription": "Don't forget to save your API key somewhere safe. If you lose it, you can't recover it. You'll have to regenerate the API key.",
+      "agreement": "I understand that this is the only place I can access the <1>API Key</1>.<2/>If I don't copy and store it now, <3>I won't be able to do it again</3>.",
+      "continue": "Continue"
+    },
+    "ApplicationsList": {
+      "searchByName": "Search by name..."
+    },
+    "ApplicationDetail": {
+      "selectPermissions": "Select permissions",
+      "permissionsCaption": "To learn more about permissions,",
+      "saveChanges": "Save Changes",
+      "dangerZone": "Danger Zone",
+      "regenerateTitle": "Regenerate API Key",
+      "regenerateDescription": "If you forgot or lost you this API Key, you can regenerate it. <1/> All authorized apps must be updated with the new API Key.",
+      "regenerateAction": "Regenerate API Key",
+      "deleteTitle": "Delete Application",
+      "deleteDescription": "After deleting, tokens that use this application will stop working.",
+      "deleteAction": "Delete Application",
+      "regenerateModalTitle": "Regenerate API Key",
+      "regenerate": "Regenerate",
+      "regenerateModalMessage": "Are you sure you want to regenerate the <1>API Key</1> for <2>{{appName}}</2>?",
+      "regenerateModalCaption": "You won't be able to recover it after this action.",
+      "regenerateConfirmCaption": "Type the application name to confirm.",
+      "deleteModalTitle": "Delete Application",
+      "delete": "Delete",
+      "deleteModalMessage": "Are you sure you want to delete <1>{{appName}}</1>?",
+      "deleteModalCaption": "You won't be able to recover it after this action.",
+      "deleteConfirmCaption": "Type the application name to confirm."
+    },
+    "ApplicationDangerZone": {
+      "regenerateTitle": "Regenerate API Key",
+      "regenerateDescription": "If you forgot or lost you this API Key, you can regenerate it. <1/> All authorized apps must be updated with the new API Key.",
+      "regenerateAction": "Regenerate API Key",
+      "deleteTitle": "Delete Application",
+      "deleteDescription": "After deleting, tokens that use this application will stop working.",
+      "deleteAction": "Delete Application",
+      "regenerateModalTitle": "Regenerate API Key",
+      "regenerate": "Regenerate",
+      "regenerateModalMessage": "Are you sure you want to regenerate the <1>API Key</1> for <2>{{appName}}</2>?",
+      "regenerateModalCaption": "You won't be able to recover it after this action.",
+      "regenerateConfirmCaption": "Type the application name to confirm."
+    },
+    "ApplicationDeleteModal": {
+      "deleteModalTitle": "Delete Application",
+      "delete": "Delete",
+      "deleteModalMessage": "Are you sure you want to delete <1>{{appName}}</1>?",
+      "deleteModalCaption": "You won't be able to recover it after this action.",
+      "deleteConfirmCaption": "Type the application name to confirm."
+    },
+    "ApplicationPermissions": {
+      "groups": {
+        "Payment": {
+          "description": ""
+        }
+      },
+      "disabledTooltip": "To access \"{{ permission }}\" permission, contact us.",
+      "impactLevels": {
+        "label": "Impact",
+        "low": "Low",
+        "moderate": "Moderate",
+        "high": "High"
+      },
+      "permissions": {
+        "tenant:read": {
+          "description": "Read tenants"
+        },
+        "tenant:update": {
+          "description": "Update tenants"
+        },
+        "tenant:delete": {
+          "description": "Delete tenants"
+        },
+        "application:read": {
+          "description": "Read applications"
+        },
+        "application:create": {
+          "description": "Create applications"
+        },
+        "application:update": {
+          "description": "Update and regenerate API keys for applications"
+        },
+        "application:delete": {
+          "description": "Delete applications"
+        },
+        "log:read": {
+          "description": "Read logs"
+        },
+        "token:general:read:low": {
+          "description": "Read tokens with general classification of low impact level"
+        },
+        "token:general:read:moderate": {
+          "description": "Read tokens with general classification of moderate or low impact levels"
+        },
+        "token:general:read:high": {
+          "description": "Read tokens with general classification of high, moderate, or low impact levels"
+        },
+        "token:general:create": {
+          "description": "Create tokens with general classification of any impact level"
+        },
+        "token:general:delete": {
+          "description": "Delete tokens with general classification of any impact level"
+        },
+        "token:general:use:proxy": {
+          "description": "Use tokens in the Proxy with general classification of any impact level"
+        },
+        "token:general:use:reactor": {
+          "description": "Use tokens in Reactors with general classification of any impact level"
+        },
+        "token:bank:read:low": {
+          "description": "Read tokens with bank classification of low impact level"
+        },
+        "token:bank:read:moderate": {
+          "description": "Read tokens with bank classification of moderate or low impact levels"
+        },
+        "token:bank:read:high": {
+          "description": "Read tokens with bank classification of high, moderate, or low impact levels"
+        },
+        "token:bank:create": {
+          "description": "Create tokens with bank classification of any impact level"
+        },
+        "token:bank:delete": {
+          "description": "Delete tokens with bank classification of any impact level"
+        },
+        "token:bank:use:proxy": {
+          "description": "Use tokens in the Proxy with bank classification of any impact level"
+        },
+        "token:bank:use:reactor": {
+          "description": "Use tokens in Reactors with bank classification of any impact level"
+        },
+        "token:pci:read:low": {
+          "description": "Read tokens with PCI classification of low impact level"
+        },
+        "token:pci:read:moderate": {
+          "description": "Read tokens with PCI classification of moderate or low impact levels"
+        },
+        "token:pci:read:high": {
+          "description": "Read tokens with PCI classification of high, moderate, or low impact levels"
+        },
+        "token:pci:create": {
+          "description": "Create tokens with PCI classification of any impact level"
+        },
+        "token:pci:delete": {
+          "description": "Delete tokens with PCI classification of any impact level"
+        },
+        "token:pci:use:proxy": {
+          "description": "Use tokens in the Proxy with PCI classification of any impact level"
+        },
+        "token:pci:use:reactor": {
+          "description": "Use tokens in Reactors with PCI classification of any impact level"
+        },
+        "token:pii:read:low": {
+          "description": "Read tokens with PII classification of low impact level"
+        },
+        "token:pii:read:moderate": {
+          "description": "Read tokens with PII classification of moderate or low impact levels"
+        },
+        "token:pii:read:high": {
+          "description": "Read tokens with PII classification of high, moderate, or low impact levels"
+        },
+        "token:pii:create": {
+          "description": "Create tokens with PII classification of any impact level"
+        },
+        "token:pii:delete": {
+          "description": "Delete tokens with PII classification of any impact level"
+        },
+        "token:pii:use:proxy": {
+          "description": "Use tokens in the Proxy with PII classification of any impact level"
+        },
+        "token:pii:use:reactor": {
+          "description": "Use tokens in Reactors with PII classification of any impact level"
+        },
+        "reactor:read": {
+          "description": "Read reactors and formulas"
+        },
+        "reactor:create": {
+          "description": "Create reactors and formulas"
+        },
+        "reactor:update": {
+          "description": "Update reactors and formulas"
+        },
+        "reactor:delete": {
+          "description": "Delete reactors and formulas"
+        }
+      }
+    }
+  },
+  "sandbox": {
+    "SandboxApplication": {
+      "view": "View",
+      "switch": "Switch"
+    },
+    "SandboxExample": {
+      "tokenize": "Tokenize",
+      "encryptTokenize": "Encrypt & Tokenize",
+      "disabledReasons": {
+        "noApplication": "To tokenize data, use the portal to create an application and set your API key.",
+        "missingPermissionsPrefix": "Your application needs one of the following permissions: ",
+        "missingPermissionsSuffix": "Find out more about permissions <1>here</1> or click on \"View\" above to edit your application's permissions."
+      },
+      "tokenSuccessMessage": "You have created a new token!",
+      "viewToken": "View Token",
+      "viewTokens": "View Tokens",
+      "retrieve": "Retrieve",
+      "retrieveDecrypt": "Retrieve & Decrypt"
+    },
+    "SandboxExampleCode": {
+      "request": "Request",
+      "response": "Response",
+      "readDocs": "Read the Docs"
+    },
+    "SandboxTextareaExample": {
+      "title": "Any data",
+      "caption": "Input any data below to get a feel for how tokenization works.",
+      "inputLabel": "Input some data",
+      "inputPlaceholder": "Type anything"
+    },
+    "SandboxUserAccountExample": {
+      "title": "User account",
+      "caption": "Try out an example of how you can tokenize your customers sensitive data.",
+      "nameLabel": "Name",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Phone"
+    },
+    "SandboxAtomicCardExample": {
+      "title": "Credit Cards",
+      "caption": "Try out an example of tokenizing Credit Cards.",
+      "numberLabel": "Card Number",
+      "numberHelperText": "Check out our <1>available test card numbers</1>.",
+      "expirationMonthLabel": "Expiration Month",
+      "expirationYearLabel": "Expiration Year",
+      "cvcLabel": "CVC"
+    },
+    "SandboxAtomicBankExample": {
+      "title": "Banks",
+      "caption": "Try out an example of tokenizing Banks.",
+      "accountNumberLabel": "Account Number",
+      "routingNumberLabel": "Routing Number"
+    },
+    "SandboxYouEncrypt": {
+      "checkboxLabel": "Encrypt data using <1>YouEncrypt</1>",
+      "keypairTitle": "Generated Keypair",
+      "downloadLabel": "Download Keypair",
+      "regenerateLabel": "Regenerate",
+      "emptyKeypairMessage": "To generate a keypair, use the portal to create an application and set your API key."
+    },
+    "SandboxRetrieveTokenModal": {
+      "retrieve": "Retrieve",
+      "retrieveDecrypt": "Retrieve & Decrypt",
+      "keypairTitle": "Your Keypair",
+      "decryptionError": "Decryption Error",
+      "retrieveError": "Retrieve Error"
+    }
+  },
+  "tenant": {
+    "CreateTenantModal": {
+      "cancel": "Cancel",
+      "title": "Create new Tenant",
+      "tenantNameHelper": "You can change the Tenant name later",
+      "create": "Create Tenant"
+    },
+    "CreateFirstTenant": {
+      "title": "Welcome to Basis Theory",
+      "intro": "Everything starts with a Tenant. Tenants store configuration and tokens - typically Tenants are used for test vs production environments. Find out more about Tenants ",
+      "getStarted": "To get started, let's create your first Tenant.",
+      "tenantNameHelperText": "You'll be able to change this name or create additional tenants later.",
+      "startBasisTheory": "Get Started"
+    }
+  },
+  "tenantInvitation": {
+    "CreateTenantInvitationModal": {
+      "title": "Invite Member",
+      "invite": "Invite",
+      "helperTexts": {
+        "nominal": "Type the email where you want to send the invite.",
+        "400": "Invalid email.",
+        "403": "Please verify your email before inviting a member. For further assistance, visit <1>{{ supportSite }}</1>."
+      }
+    },
+    "DeleteTenantInvitationModal": {
+      "confirm": "Confirm",
+      "title": "Delete Invitation",
+      "message": "Are you sure you want to delete the invitation to <1>{{ invitationEmail }}</1>?",
+      "tenantInvitationDeleteSuccess": "Tenant Invitation has been deleted."
+    },
+    "Snackbar": {
+      "tenantInvitationCreateSuccess": "Invitation was sent to <1>{{ createdTenantInvitationEmail }}</1>.",
+      "tenantInvitationDeleteSuccess": "Tenant Invitation has been deleted.",
+      "tenantInvitationResendSuccess": "A new invitation has been sent to <1>{{ invitationEmail }}<1>."
+    }
+  },
+  "token": {
+    "TokensTable": {
+      "tokenId": "Token ID"
+    }
+  },
+  "reactor": {
+    "EmptyReactors": {
+      "heading": "You don't have any Reactors yet.",
+      "caption": "Start enriching your Tokens by creating a new Reactor.",
+      "button": "Create Reactor",
+      "info": [
+        {
+          "title": "What is a Reactor?",
+          "content": "Reactors enable the secure processing of sensitive token data with 3rd parties."
+        },
+        {
+          "title": "How do I create a new Reactor?",
+          "content": "Configure a Reactor here on the Portal or with <1>our API</1>. See <2>our guide</2> for more details."
+        },
+        {
+          "title": "How to use a Reactor?",
+          "content": "Using <1>our API</1>, you are enabled to securely react with any Token."
+        }
+      ]
+    },
+    "ReactorFormulaDetailContent": {
+      "configurationCaption": "The following properties will be required to configure this reactor.",
+      "codePreview": "Code Preview",
+      "codePreviewCaption": "To better understand the reactor formula, explore the code used to enrich your token.",
+      "useFormula": "Use this formula"
+    },
+    "ReactorFormulaPrivateBetaContent": {
+      "header": "Private Beta Access",
+      "wantToUseThisFormula": "Want to use this formula?",
+      "caption1": "Use our open framework for interacting with the world's most sensitive data. We make it easy to use the same logic you have already built to exchange your tokenized data with a 3rd party.",
+      "caption2": "This specific formula is currently in private beta. Reach out to use this and other formulas with limited availability.",
+      "getInTouch": "Get in touch!",
+      "action": "OK, got it!"
+    },
+    "ReactorDetails": {
+      "nameLabel": "Token Reactor Name",
+      "nameHelperText": "Easily identify your reactor with a descriptive name.",
+      "idLabel": "Reactor ID",
+      "urlLabel": "API URL",
+      "saveReactor": "Save Reactor",
+      "createReactor": "Create Reactor",
+      "reactorIdLabel": "Reactor ID",
+      "exampleRequestLabel": "Example React Request"
+    },
+    "ReactorDangerZone": {
+      "deleteTitle": "Delete Reactor",
+      "deleteDescription": "After deleting, tokens that use this application will stop working.",
+      "deleteAction": "Delete Reactor",
+      "deleteModalTitle": "Delete Reactor",
+      "deleteModalConfirm": "Delete Reactor",
+      "deleteModalFieldLabel": "Token Reactor Name",
+      "deleteModalFieldHelperText": "Type the token reactor name to confirm",
+      "deleteModalMessage": "Are you sure you want to delete <1>{{ reactorName }}</1>?",
+      "deleteModalMessageCaption": "You won't be able to recover it after this action."
+    },
+    "RequestParameters": {
+      "title": "Request Parameters",
+      "description": "These properties are required each time you create a reaction. Include these properties within the POST body of your request. Learn more about it in <1>our documentation</1>.",
+      "nameHeader": "Name",
+      "typeHeader": "Type",
+      "requiredHeader": "Required",
+      "descriptionHeader": "Description"
+    }
+  },
+  "settings": {
+    "InformationSettings": {
+      "tenantInformation": "Tenant Information",
+      "tenantName": "Tenant Name",
+      "saveChanges": "Save Changes",
+      "dangerZone": {
+        "title": "Danger Zone",
+        "deleteTitle": "Delete this Tenant and remove all tokens and applications",
+        "deleteDescription": "This action is permanent. You will not be able retrieve any associated data created in this Tenant; this includes tokens, applications, etc.",
+        "deleteAction": "Delete Tenant",
+        "deleteModal": {
+          "title": "Delete Tenant",
+          "action": "Delete Tenant",
+          "messageTitle": "Are you sure you want to delete <1>{{tenantName}}</1> tenant?",
+          "message": "<0>You will not be able to recover this tenant after deleting it.</0><1>You are deleting all associated data within this Tenant.</1>",
+          "messageList": "<0>Configuration</0><1>Applications</1><2>Tokens</2><3>Token Data</3>",
+          "confirmCaption": "Type the tenant name below to confirm deletion."
+        }
+      }
+    },
+    "PlanAndBilling": {
+      "yourPlan": {
+        "viewDetails": "View Details"
+      },
+      "allPlans": {
+        "title": "All Plans",
+        "caption": "Find the best plan for you",
+        "developerPlan": {
+          "planName": "DEVELOPER",
+          "price": "$0",
+          "month": "mo",
+          "description": "1,000 Included Monthly Active Tokens ($.10/token/mo after)",
+          "featureHeading": "WHAT YOU CAN DO",
+          "feature1": "Create, Encrypt, Decrypt tokens",
+          "feature2": "Use tokens with Serverless Reactors",
+          "feature3": "Free storage",
+          "feature4": "24 hours of Logs",
+          "feature5": "Payload limit of 1MB",
+          "action": "Your Plan",
+          "footnoteHeading": "What is a Monthly Active Token (MAT)?",
+          "footnoteContent": "When a token has been Created, Read, Decrypted or used with one of our services (eg. Proxy or Reactor) it will become a Monthly Active Token for the current monthly billing cycle. Subsequent interactions with an active token do not count against the included active token limit."
+        },
+        "customPlans": {
+          "planName": "CUSTOM PLANS",
+          "price": "Let's Talk",
+          "month": "",
+          "description": "Reach out to talk about discount volume pricing.",
+          "featureHeading": "EVERYTHING IN DEVELOPER PLAN +",
+          "feature1": "Share plan across Tenants",
+          "feature2": "Dedicated environment",
+          "feature3": "Custom log access",
+          "feature4": "Custom payload size",
+          "feature5": "Custom Reactors (Bring your own code)",
+          "feature6": "Dedicated support",
+          "action": "Contact Us"
+        }
+      }
+    },
+    "Billing": {
+      "title": "Billing",
+      "caption": "Don't want to be limited to {{ includedMonthlyActiveTokens }} Monthly Active Tokens?<br>Add a Payment Method to increase your limit.",
+      "addPayment": "Add Payment Method",
+      "paymentInformationSuccessMessage": "<1>Payment Method</1> was added successfully!",
+      "paymentMethod": "Payment Method",
+      "paymentCaption": "{{ brand }} credit card ending in {{ lastDigits }}"
+    },
+    "PaymentInformationModal": {
+      "title": "Payment Method",
+      "addPayment": "Add Payment Method",
+      "verifying": "Verifying Card",
+      "cardValidationMessages": {
+        "invalid": {
+          "cardNumber": "Your card number is invalid",
+          "expirationDate": "Your card's expiration date is invalid",
+          "cvc": "Your card's security code is invalid"
+        },
+        "incomplete": {
+          "cardNumber": "Your card number is incomplete",
+          "expirationDate": "Your card's expiration date is incomplete",
+          "cvc": "Your card's security code is incomplete"
+        }
+      },
+      "cardSubmitErrorMessage": "Adding your Payment Method has failed. Try again with another card."
+    }
+  },
+  "dashboard": {
+    "TokenOverview": {
+      "title": "Token Overview",
+      "period": "Last 30 days",
+      "tokenCreations": "Token Creations",
+      "tokenReads": "Token Reads",
+      "tokenDeletes": "Token Deletes"
+    },
+    "MonthlyActiveTokens": {
+      "title": "Developer Plan"
+    },
+    "LatestAuditLogs": {
+      "title": "Latest Audit Logs",
+      "period": "Last {{ duration }}",
+      "seeAllLogs": "See all logs",
+      "EmptyLogs": {
+        "heading": "No Audit Logs found",
+        "caption": "Your plan only allows you to view Audit Logs for the last {{ duration }}. <br> If you’re looking for logs older than this — <1>get in touch</1>."
+      }
+    }
+  },
+  "logs": {
+    "AuditLogsTable": {
+      "title": "Audit Logs",
+      "paginationItemName": "logs",
+      "period": "Last {{ duration }}",
+      "columns": {
+        "timestamp": "Timestamp",
+        "actor": "Actor",
+        "entity": "Entity",
+        "operation": "Operation",
+        "message": "Message"
+      },
+      "empty": {
+        "heading": "No results matching your query...",
+        "caption": "Your plan only allows you to view Audit Logs for the last <1>duration</1>. If you're looking for logs older than this - <2>get in touch</2>."
+      }
+    }
+  }
+}

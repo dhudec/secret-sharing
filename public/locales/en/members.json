@@ -1,0 +1,14 @@
+{
+  "title": "Members",
+  "subtitle": "Invite other team members to your tenant",
+  "inviteMember": "Invite Member",
+  "invites": "Invites",
+  "members": "Members",
+  "resendInvitation": "Resend Invitation E-mail",
+  "deleteInvitation": "Delete Invitation",
+  "emptyInvites": {
+    "heading": "No pending member invites found",
+    "caption": "Invite members to your tenant by email",
+    "button": "Invite Member"
+  }
+}

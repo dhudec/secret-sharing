@@ -1,1 +1,1 @@
-# secret-sharing-ui
+# Basis Theory Secret Sharing UI

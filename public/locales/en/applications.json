@@ -1,0 +1,10 @@
+{
+  "title": "Applications",
+  "subtitle": "Create an Application and assign permissions; giving you the ability to create and manage your tokens.",
+  "createApplication": "Create Application",
+  "emptyApplications": {
+    "heading": "You don't have any applications yet.",
+    "caption": "Start by creating an application.",
+    "button": "Create application"
+  }
+}

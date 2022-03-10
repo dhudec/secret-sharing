@@ -1,0 +1,16 @@
+{
+  "title": "Reactors",
+  "subtitle": "Manage your ability to use your Tokens with 3rd parties.",
+  "createReactor": "Create Reactor",
+  "searchPlaceholder": "Search Reactors",
+  "tabs": {
+    "all": "All Reactors",
+    "general": "General",
+    "atomicCards": "Atomic Cards",
+    "atomicBanks": "Atomic Banks"
+  },
+  "emptyFiltered": {
+    "heading": "No results found...",
+    "caption": "Please try a different search criteria."
+  }
+}

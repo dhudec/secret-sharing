@@ -1,0 +1,4 @@
+{
+  "title": "Audit Logs",
+  "logHistoryLimitAlert": "Your plan only allows you to view Audit Logs for the last <1>duration</1>. If you're looking for logs older than this - <2>get in touch</2>."
+}

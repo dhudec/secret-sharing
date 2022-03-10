@@ -1,0 +1,20 @@
+{
+  "title": "Reactor Formulas",
+  "subtitle": "Reactor Formulas are pre-configured integrations to securely integrate your sensitive data with 3rd party partners to process, enrich, and associate your tokens.",
+  "searchPlaceholder": "Search Formulas",
+  "privateBeta": "PRIVATE BETA",
+  "tabs": {
+    "all": "All Formulas",
+    "general": "General",
+    "atomicCards": "Atomic Cards",
+    "atomicBanks": "Atomic Banks"
+  },
+  "emptyFormulas": {
+    "heading": "No Reactor Formulas available",
+    "caption": "Please try again later."
+  },
+  "emptyFiltered": {
+    "heading": "No results found...",
+    "caption": "Please try a different search criteria."
+  }
+}

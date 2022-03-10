@@ -1,0 +1,66 @@
+{
+  "title": "Getting Started",
+  "subtitle": "Take Basis Theory for a spin and create your first token!",
+  "steps": {
+    "createTenant": {
+      "complete": {
+        "title": "Tenant created",
+        "caption": "Everything starts with a tenant, and you've successfully created one."
+      },
+      "active": {
+        "title": "Tenant created",
+        "caption": "Everything starts with a tenant, and you've successfully created one."
+      },
+      "inactive": {
+        "title": "Tenant created",
+        "caption": "Everything starts with a tenant, and you've successfully created one."
+      }
+    },
+    "createApplication": {
+      "complete": {
+        "title": "Application created!",
+        "caption": "You've succefully created your first application!"
+      },
+      "active": {
+        "title": "Create an application",
+        "caption": "Create an application in your current tenant to get your API key."
+      },
+      "inactive": {
+        "title": "Create an application",
+        "caption": "Create an application in your current tenant to get your API key."
+      },
+      "createBtn": "Create an application",
+      "learnMoreLink": "Learn more about applications",
+      "applicationName": "{{userName}} Test Application"
+    },
+    "createToken": {
+      "complete": {
+        "title": "First token created! 🎉",
+        "caption": "Sweet! You've created your first token!"
+      },
+      "active": {
+        "title": "Create your first token",
+        "caption": "Awesome! Now it's time to create a token. There are a few options you could try:"
+      },
+      "inactive": {
+        "title": "Create your first token",
+        "caption": "You need to create an application first."
+      },
+      "guidesBtn": "Quickstart Guides",
+      "sandboxLink": "Use our Tokenization Sandbox",
+      "apiDocsLink": "Check our API docs"
+    },
+    "whatsNext": {
+      "title": "What's next?",
+      "caption": "Feel free to take a look at our guides, and join our Discord community.",
+      "guidesCaption": "GUIDES",
+      "guide1Link": "Securing PII Data",
+      "guide2Link": "Securing Bank Data",
+      "guide3Link": "Securing Card Data",
+      "guide4Link": "Use Elements to collect without touching the data",
+      "dashboardBtn": "Go to my dashboard",
+      "supportLink": "Get support",
+      "discordLink": "Discord community"
+    }
+  }
+}

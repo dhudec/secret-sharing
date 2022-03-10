@@ -1,0 +1,20 @@
+{
+  "roles": {
+    "ADMIN": "Admin",
+    "VIEWER": "Viewer"
+  },
+  "modal": {
+    "success": {
+      "title": "Invitation Accepted",
+      "message": "You are now a member of <1>{{tenantName}}</1> with <3>{{role}}</3> permissions. Click OK to be taken to <5>{{tenantName}}</5>."
+    },
+    "notFound": {
+      "title": "Invitation Not Found",
+      "message": "The invitation you requested could not be found. Please re-check the email that was sent to you and try again."
+    },
+    "conflict": {
+      "title": "Failed to Accept Invitation",
+      "message": "Unable to accept Tenant Invitation because you are already a member of <1>{{tenantName}}</1> with <3>{{role}}</3> permissions. Click OK to be taken to <5>{{tenantName}}</5>."
+    }
+  }
+}

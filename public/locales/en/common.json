@@ -1,0 +1,103 @@
+{
+  "learnMore": "Learn More",
+  "documentation": "Documentation",
+  "home": "Home",
+  "goToHome": "Go to home",
+  "clickHere": "click here",
+  "created": "Created",
+  "createdBy": "Created By",
+  "update": "Update",
+  "updated": "Updated",
+  "unknown": "Unknown",
+  "confirm": "Confirm",
+  "ok": "OK",
+  "remove": "Remove",
+  "cancel": "Cancel",
+  "backTo": "Back to",
+  "goTo": "Go to",
+  "applicationName": "Application Name",
+  "jsonObject": "JSON Object",
+  "type": "Type",
+  "classificationAndImpact": "Classification & Impact",
+  "actions": "Actions",
+  "application": "Application",
+  "docs": "Docs",
+  "readTheDocs": "Read the Docs",
+  "httpRequest": "HTTP Request",
+  "encrypted": "Encrypted",
+  "decrypted": "Decrypted",
+  "close": "Close",
+  "more": "More",
+  "configuration": "Configuration",
+  "name": "Name",
+  "details": "Details",
+  "none": "None",
+  "dangerZone": "Danger Zone",
+  "description": "Description",
+  "developerPlan": "Developer Plan",
+  "managePlan": "Manage Plan",
+  "upgradePlan": "Upgrade Plan",
+  "search": "Search",
+  "clear": "Clear",
+  "email": "Email",
+  "status": "Status",
+  "pending": "Pending",
+  "expired": "Expired",
+  "expiresAt": "Expires At",
+  "role": "Role",
+  "pages": {
+    "gettingStarted": "Getting Started",
+    "dashboard": "Dashboard",
+    "applications": "Applications",
+    "tokens": "Tokens",
+    "members": "Members",
+    "settings": "Settings",
+    "atomicCards": "Atomic Cards",
+    "users": "Users",
+    "sandbox": "Sandbox",
+    "reactors": "Reactors",
+    "reactorFormulas": "Reactor Formulas"
+  },
+  "applicationTypes": {
+    "server_to_server": {
+      "title": "Server to Server",
+      "description": "Services, scripts, or processes running on your backend that use tokens.",
+      "caption": "e.g.: Java, C#, NodeJS, Go, etc."
+    },
+    "public": {
+      "title": "Client-side Application",
+      "description": "A javascript or mobile front-end application that uses tokens.",
+      "caption": "e.g.: React, Javascript, iOS and Android."
+    },
+    "elements": {
+      "title": "Elements",
+      "description": "A front-end application embedding Basis Theory Elements to tokenize data.",
+      "caption": "e.g.: Java C#, Node, JS, Go, etc."
+    },
+    "management": {
+      "title": "Management",
+      "description": "Processes needing access to configure features/settings of tokenization platform.",
+      "caption": "e.g.: Terraform, CLIs, Scripts, etc."
+    }
+  },
+  "tokenTypes": {
+    "token": "General",
+    "card": "Atomic Card",
+    "bank": "Atomic Bank",
+    "card_number": "Card Number",
+    "us_bank_routing_number": "Bank Routing Number",
+    "us_bank_account_number": "Bank Account Number",
+    "social_security_number": "Social Security Number",
+    "employer_id_number": "Employer Id Number"
+  },
+  "badges": {
+    "private_beta": "PRIVATE BETA",
+    "card_added": "CARD ADDED",
+    "limit_exceeded": "LIMIT EXCEEDED",
+    "ADMIN": "ADMIN",
+    "OWNER": "OWNER"
+  },
+  "tenantName": "Tenant Name",
+  "testTenantName": "Test Tenant",
+  "here": "here"
+}
