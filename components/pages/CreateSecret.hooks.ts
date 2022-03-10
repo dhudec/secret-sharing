@@ -24,7 +24,6 @@ export const useCreateSecret = () => {
     ttl,
     setTtl,
     createSecret,
-    data,
     setData,
   };
 };

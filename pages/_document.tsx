@@ -11,13 +11,11 @@ import { useDocument } from '@/components/pages/Document.hooks';
 class MyDocument extends Document {
   public render(): JSX.Element {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { csp, nonce, gtmId } = useDocument();
+    const { nonce, gtmId } = useDocument();
 
     return (
       <Html lang="en">
         <Head nonce={nonce}>
-          <meta content={nonce} property="csp-nonce" />
-          <meta content={csp} httpEquiv="Content-Security-Policy" />
           {/* PWA primary color */}
           <meta content={dark.palette.primary.main} name="theme-color" />
           {/* Theme fonts */}

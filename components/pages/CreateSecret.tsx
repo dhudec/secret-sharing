@@ -9,8 +9,14 @@ import Typography from '@mui/material/Typography';
 import { useCreateSecret } from '@/components/pages/CreateSecret.hooks';
 import { BasisTheoryLogoWithText } from '@/components/shared';
 
-export const CreateSecret = () => {
-  const { t, ttl, setTtl, setData } = useCreateSecret();
+interface Props {
+  ttl: string;
+  setTtl: (newTtl: string) => void;
+  setData: (newData: string) => void;
+}
+
+export const CreateSecret = ({ ttl, setTtl, setData }: Props) => {
+  const { t } = useCreateSecret();
 
   return (
     <Box
@@ -45,7 +51,6 @@ export const CreateSecret = () => {
             {t('oneTimeLink')}
           </Typography>
           <TextField
-            maxRows={8}
             multiline
             onChange={(event) => setData(event.target.value)}
             placeholder="Passwords, credentials, API Keys or anything..."

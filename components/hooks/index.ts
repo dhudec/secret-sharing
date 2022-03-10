@@ -1,4 +1,3 @@
-export * from './useConfig';
 export * from './useOpenState';
 export * from './useYourPlan';
 export * from './useStateApi';

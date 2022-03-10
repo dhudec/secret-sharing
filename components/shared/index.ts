@@ -34,4 +34,3 @@ export * from './YourPlanActiveTokens';
 export * from './YourPlanCaption';
 export * from './LoadingButton';
 export * from './Badge';
-export * from './Analytics';
