@@ -8,6 +8,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Typography from '@mui/material/Typography';
 import { useCreateSecret } from '@/components/pages/CreateSecret.hooks';
 import { BasisTheoryLogoWithText } from '@/components/shared';
+import {PoweredByBasisTheory} from "@/components/shared/PoweredByBasisTheory";
 
 interface Props {
   ttl: string;
@@ -33,11 +34,8 @@ export const CreateSecret = ({ ttl, setTtl, setData, createSecret }: Props) => {
           justifyContent="center"
           textAlign="center"
         >
-          <Box mb={19.5}>
-            <Typography color="textSecondary">{t('poweredBy')}</Typography>
-            <Box display="flex" justifyContent="center">
-              <BasisTheoryLogoWithText />
-            </Box>
+          <Box  mb={19.5}>
+            <PoweredByBasisTheory />
           </Box>
           <Typography
             mb={1}
