@@ -21,12 +21,7 @@ export const CreateSecret = ({ ttl, setTtl, setData, createSecret }: Props) => {
   const { t } = useCreateSecret();
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      height="100vh"
-      justifyContent="center"
-    >
+    <Box>
       <Container maxWidth="sm">
         <Box
           display="flex"
@@ -34,7 +29,7 @@ export const CreateSecret = ({ ttl, setTtl, setData, createSecret }: Props) => {
           justifyContent="center"
           textAlign="center"
         >
-          <Box mb={19.5}>
+          <Box mt={10} mb={19.5}>
             <PoweredByBasisTheory />
           </Box>
           <Typography

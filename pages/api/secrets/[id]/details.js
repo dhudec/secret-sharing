@@ -15,6 +15,7 @@ export default async function handler(req, res) {
         if (getTime(datePlusTTL) > Date.now()) {
             res.status(200).json({id: token.id, timeLeft: datePlusTTL});
         } else {
+            await bt.tokens.delete(id);
             res.status(404).json({})
         }
     } catch {

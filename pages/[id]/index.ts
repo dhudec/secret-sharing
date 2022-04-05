@@ -11,7 +11,8 @@ export const getStaticPaths: GetStaticPaths = () => ({
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
-        'components'
+        'components',
+        'portal-commons'
     ])),
   },
 });

@@ -16,15 +16,10 @@ interface Props {
 
 export const ShareSecret = ({secretId}: Props) => {
   const { t } = useTranslation('secrets');
-  const secretUrl = `${window.location.host}/${secretId}`;
+  const secretUrl = `${window.location.origin}/${secretId}`;
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      height="100vh"
-      justifyContent="center"
-    >
+    <Box>
       <Container maxWidth="sm">
         <Box
           display="flex"
@@ -32,7 +27,7 @@ export const ShareSecret = ({secretId}: Props) => {
           justifyContent="center"
           textAlign="center"
         >
-          <Box mb={19.5}>
+          <Box mt={10} mb={19.5}>
             <PoweredByBasisTheory />
           </Box>
           <Typography
@@ -47,17 +42,19 @@ export const ShareSecret = ({secretId}: Props) => {
           <Typography color="textSecondary" mb={5}>
             {t('oneTimeLink')}
           </Typography>
-          <Box display="flex" flexDirection="row" mb={3} justifyContent="space-around">
-            <TextField
-                sx={{
-                  width: (theme) => theme.spacing(50)
-                }}
-                inputProps={{
-                  readOnly: true,
-                  disabled: true,
-                }}
-                value={secretUrl}
-            />
+          <Box display="flex" flexDirection="row" mb={3} justifyContent="space-between">
+            <Box mr={2} sx={{width: "100%"}}>
+              <TextField
+                  inputProps={{
+                    readOnly: true,
+                    disabled: true,
+                  }}
+                  sx={{
+                      width: "100%"
+                  }}
+                  value={secretUrl}
+              />
+            </Box>
             <CopyButton
                 content={secretUrl}
                 iconPosition="start"
@@ -90,10 +87,10 @@ export const ShareSecret = ({secretId}: Props) => {
             </Button>
           </Box>
         </Box>
+        <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
+          <FooterInfo />
+        </Box>
       </Container>
-      <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
-        <FooterInfo />
-      </Box>
     </Box>
   );
 };

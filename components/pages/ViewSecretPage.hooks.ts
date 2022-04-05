@@ -10,7 +10,8 @@ export const useViewSecretPage = () => {
   const router = useRouter();
   const secretId = router.query.id;
 
-  console.log('Making API request to get secret details');
+  console.log('Rendering ViewSecretPage');
+
   const { isValidating } = useApi<Secret>(
       `secrets/${secretId}/details`,
       undefined,
@@ -20,6 +21,7 @@ export const useViewSecretPage = () => {
   );
 
   const viewSecret = async () => {
+      console.log('Viewing secret');
       const {data} = await clientApiFramework.secrets.get({
         id: secretId
       });

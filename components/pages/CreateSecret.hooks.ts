@@ -7,10 +7,12 @@ export const useCreateSecret = () => {
   const [ttl, setTtl] = useState<string>('600');
   const [data, setData] = useState<string>();
 
+  console.log('Rendering CreateSecret page');
   const clientApiFramework = useClientApiFramework();
 
   const createSecret = async () => {
     try {
+      console.log('Creating secret');
       const secret = await clientApiFramework.secrets.create({
         ttl: Number(ttl),
         data,

@@ -11,12 +11,11 @@ import {FooterInfo} from "@/components/pages/FooterInfo";
 import Container from "@mui/material/Container";
 
 export const ViewSecretPage = () => {
-    console.log('Rendering page');
     const {isValidating, secret, viewSecret} = useViewSecretPage();
 
     if (isValidating) return null;
+    console.log('ViewSecretPage should be displayed');
 
-    console.log('Is Validating is null');
     return (
         <Box
             display="flex"
