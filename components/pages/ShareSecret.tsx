@@ -1,20 +1,20 @@
 import React from 'react';
+import { Paper, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'next-i18next';
-import {BasisTheoryLogoWithText, CopyButton} from '@/components/shared';
-import {Paper, TextField} from "@mui/material";
-import Button from "@mui/material/Button";
-import RefreshIcon from "@/components/icons/RefreshIcon";
-import {FooterInfo} from "@/components/pages/FooterInfo";
-import {PoweredByBasisTheory} from "@/components/shared/PoweredByBasisTheory";
+import RefreshIcon from '@/components/icons/RefreshIcon';
+import { FooterInfo } from '@/components/pages/FooterInfo';
+import { BasisTheoryLogoWithText, CopyButton } from '@/components/shared';
+import { PoweredByBasisTheory } from '@/components/shared/PoweredByBasisTheory';
 
 interface Props {
   secretId: string;
 }
 
-export const ShareSecret = ({secretId}: Props) => {
+export const ShareSecret = ({ secretId }: Props) => {
   const { t } = useTranslation('secrets');
   const secretUrl = `${window.location.origin}/${secretId}`;
 
@@ -42,52 +42,66 @@ export const ShareSecret = ({secretId}: Props) => {
           <Typography color="textSecondary" mb={5}>
             {t('oneTimeLink')}
           </Typography>
-          <Box display="flex" flexDirection="row" mb={3} justifyContent="space-between">
-            <Box mr={2} sx={{width: "100%"}}>
+          <Box
+            display="flex"
+            flexDirection="row"
+            mb={3}
+            justifyContent="space-between"
+          >
+            <Box mr={2} sx={{ width: '100%' }}>
               <TextField
-                  inputProps={{
-                    readOnly: true,
-                    disabled: true,
-                  }}
-                  sx={{
-                      width: "100%"
-                  }}
-                  value={secretUrl}
+                inputProps={{
+                  readOnly: true,
+                  disabled: true,
+                }}
+                sx={{
+                  width: '100%',
+                }}
+                value={secretUrl}
               />
             </Box>
             <CopyButton
-                content={secretUrl}
-                iconPosition="start"
-                showCopyText
-                size="small"
+              content={secretUrl}
+              iconPosition="start"
+              showCopyText
+              size="small"
             />
           </Box>
-          <Paper color="#070A1B" sx={{
-            height: (theme) => theme.spacing(10),
-            width: "100%",
-            padding: (theme) => `${theme.spacing(2)} ${theme.spacing(3)}`
-          }}>
+          <Paper
+            color="#070A1B"
+            sx={{
+              height: (theme) => theme.spacing(10),
+              width: '100%',
+              padding: (theme) => `${theme.spacing(2)} ${theme.spacing(3)}`,
+            }}
+          >
             <Typography color="textSecondary" textAlign="left">
               {t('thisLinkWillBeDestroyed')}
             </Typography>
           </Paper>
           <Box display="flex" justifyContent="center">
             <Button
-                component="a"
-                href="/"
-                startIcon={<RefreshIcon />}
-                sx={{
-                  fontWeight: 600,
-                  fontSize: '16px',
-                  marginTop: (theme) => theme.spacing(4),
-                  width: 'fit-content'
-                }}
+              component="a"
+              href="/"
+              startIcon={<RefreshIcon />}
+              sx={{
+                fontWeight: 600,
+                fontSize: '16px',
+                marginTop: (theme) => theme.spacing(4),
+                width: 'fit-content',
+              }}
             >
               {t('secureAnotherSecret')}
             </Button>
           </Box>
         </Box>
-        <Box alignItems="center" display="flex" flexDirection="column" mb={8} mt={19.5}>
+        <Box
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          mb={8}
+          mt={19.5}
+        >
           <FooterInfo />
         </Box>
       </Container>

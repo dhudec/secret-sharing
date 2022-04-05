@@ -1,14 +1,14 @@
 import React from 'react';
-import ToggleButton from '@mui/material/ToggleButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
+import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Typography from '@mui/material/Typography';
 import { useCreateSecret } from '@/components/pages/CreateSecret.hooks';
 import { BasisTheoryLogoWithText } from '@/components/shared';
-import {PoweredByBasisTheory} from "@/components/shared/PoweredByBasisTheory";
+import { PoweredByBasisTheory } from '@/components/shared/PoweredByBasisTheory';
 
 interface Props {
   ttl: string;
